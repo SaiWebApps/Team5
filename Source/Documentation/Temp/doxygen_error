@@ -1,0 +1,28 @@
+warning: ignoring unsupported tag `AUTOLINK_SUPPORT       =' at line 270, file Doxyfile
+warning: ignoring unsupported tag `HTML_EXTRA_STYLESHEET  =' at line 932, file Doxyfile
+When enabling GENERATE_HTMLHELP the tree view (GENERATE_TREEVIEW) should be disabled. I'll do it for you.
+warning: source Images is not a readable file or directory... skipping.
+/home/pi/OpenNI2/Source/Documentation/Text/Conventions.txt:26: warning: unable to resolve reference to `openni::OpenNI::addListener()' for \ref command
+/home/pi/OpenNI2/Include/OpenNI.h:1288: warning: unable to resolve reference to `OpenNI::Listener' for \ref command
+/home/pi/OpenNI2/Include/OpenNI.h:1289: warning: unable to resolve reference to `OpenNI::Listener::onDeviceConnected' for \ref command
+/home/pi/OpenNI2/Include/OpenNI.h:2282: warning: argument 'char' of command @param is not found in the argument list of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize)
+/home/pi/OpenNI2/Include/OpenNI.h:2282: warning: argument 'int' of command @param is not found in the argument list of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize)
+/home/pi/OpenNI2/Include/OpenNI.h:2282: warning: The following parameters of openni::OpenNI::getLogFileName(char *strFileName, int nBufferSize) are not documented:
+  parameter 'strFileName'
+  parameter 'nBufferSize'
+/home/pi/OpenNI2/Include/OpenNI.h:2310: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogConsoleOutput(bool bConsoleOutput)
+/home/pi/OpenNI2/Include/OpenNI.h:2310: warning: The following parameters of openni::OpenNI::setLogConsoleOutput(bool bConsoleOutput) are not documented:
+  parameter 'bConsoleOutput'
+/home/pi/OpenNI2/Include/OpenNI.h:2323: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogFileOutput(bool bFileOutput)
+/home/pi/OpenNI2/Include/OpenNI.h:2323: warning: The following parameters of openni::OpenNI::setLogFileOutput(bool bFileOutput) are not documented:
+  parameter 'bFileOutput'
+/home/pi/OpenNI2/Include/OpenNI.h:2296: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogMinSeverity(int nMinSeverity)
+/home/pi/OpenNI2/Include/OpenNI.h:2296: warning: argument 'int' of command @param is not found in the argument list of openni::OpenNI::setLogMinSeverity(int nMinSeverity)
+/home/pi/OpenNI2/Include/OpenNI.h:2296: warning: The following parameters of openni::OpenNI::setLogMinSeverity(int nMinSeverity) are not documented:
+  parameter 'nMinSeverity'
+/home/pi/OpenNI2/Include/OpenNI.h:2269: warning: argument 'const' of command @param is not found in the argument list of openni::OpenNI::setLogOutputFolder(const char *strLogOutputFolder)
+/home/pi/OpenNI2/Include/OpenNI.h:2269: warning: The following parameters of openni::OpenNI::setLogOutputFolder(const char *strLogOutputFolder) are not documented:
+  parameter 'strLogOutputFolder'
+/home/pi/OpenNI2/Include/OpenNI.h:806: warning: unable to resolve reference to `VideoStream::Listener' for \ref command
+sh: 1: C:\Program Files (x86)\HTML Help Workshop\hhc.exe: not found
+error: failed to run html help compiler on index.hhp

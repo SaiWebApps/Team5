@@ -1,0 +1,548 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (os_linux_zero.cpp:270), pid=26197, tid=2649224304
+#  fatal error: caught unhandled signal 11
+#
+# JRE version: 6.0_27-b27
+# Java VM: OpenJDK Zero VM (20.0-b12 mixed mode linux-arm )
+# Derivative: IcedTea6 1.12.6
+# Distribution: Debian GNU/Linux 7.1 (n/a), package 6b27-1.12.6-1~deb7u1+rpi1
+# If you would like to submit a bug report, please include
+# instructions how to reproduce the bug and visit:
+#   http://icedtea.classpath.org/bugzilla
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x001d9fa8):  JavaThread "Thread-3" [_thread_in_native, id=26223, stack(0x9d681000,0x9de80000)]
+
+Stack: [0x9d681000,0x9de80000],  sp=0x9da81dcc,  free space=4099k
+Java frames:
+ 0x9de7e950: istate->_thread       = 0x001d9fa8
+ 0x9de7e954: istate->_bcp          = 0x00000000
+ 0x9de7e958: istate->_locals       = 0x9de7e9a0
+ 0x9de7e95c: istate->_constants    = 0xb07f0530
+ 0x9de7e960: istate->_method       = org.openni.NativeMethods.oniFrameAddRef(J)V
+ 0x9de7e964: istate->_mdx          = 0xb0546068
+ 0x9de7e968: istate->_stack        = 0x00000000
+ 0x9de7e96c: istate->_msg          = 0x00000000
+ 0x9de7e970: istate->_result       = 0x00000000
+ 0x9de7e974: (istate->_result)     = 0x00000000
+ 0x9de7e978: (istate->_result)     = 0x00000000
+ 0x9de7e97c: istate->_prev_link    = 0x9de7e940
+ 0x9de7e980: istate->_oop_temp     = 0xb07ef298
+ 0x9de7e984: istate->_stack_base   = 0x9de7e950
+ 0x9de7e988: istate->_stack_limit  = 0x9de7e94c
+ 0x9de7e98c: istate->_monitor_base = 0x9de7e950
+ 0x9de7e990: istate->_self_link    = 0x9de7e950
+ 0x9de7e994: frame_type            = INTERPRETER_FRAME
+ 0x9de7e998: next_frame            = 0x9de7e9ec
+
+ 0x9de7e99c: local[1]              = 0x00000000
+ 0x9de7e9a0: local[0]              = 0x00000000
+ 0x9de7e9a4: istate->_thread       = 0x001d9fa8
+ 0x9de7e9a8: istate->_bcp          = 0xb0f737ed (bci 5)
+ 0x9de7e9ac: istate->_locals       = 0x9de7e9f8
+ 0x9de7e9b0: istate->_constants    = 0xb0f73a30
+ 0x9de7e9b4: istate->_method       = org.openni.VideoFrameRef.<init>(J)V
+ 0x9de7e9b8: istate->_mdx          = 0xb0560228
+ 0x9de7e9bc: istate->_stack        = 0x9de7e998
+ 0x9de7e9c0: istate->_msg          = 0x00000000
+ 0x9de7e9c4: istate->_result       = 0x00000000
+ 0x9de7e9c8: (istate->_result)     = 0xb45c4174
+ 0x9de7e9cc: (istate->_result)     = 0xb45c4144
+ 0x9de7e9d0: istate->_prev_link    = 0x9de7e994
+ 0x9de7e9d4: istate->_oop_temp     = 0x00000000
+ 0x9de7e9d8: istate->_stack_base   = 0x9de7e9a4
+ 0x9de7e9dc: istate->_stack_limit  = 0x9de7e994
+ 0x9de7e9e0: istate->_monitor_base = 0x9de7e9a4
+ 0x9de7e9e4: istate->_self_link    = 0x9de7e9a4
+ 0x9de7e9e8: frame_type            = INTERPRETER_FRAME
+ 0x9de7e9ec: next_frame            = 0x9de7ea04
+
+ 0x9de7e9f0: local[2]              = 0x00000000
+ 0x9de7e9f4: local[1]              = 0x00000000
+ 0x9de7e9f8: local[0]              = 0xa2ae4b10
+ 0x9de7e9fc: call_wrapper          = 0x9da82388
+ 0x9de7ea00: frame_type            = ENTRY_FRAME
+ 0x9de7ea04: next_frame            = 0x9de7ea50
+
+ 0x9de7ea08: istate->_thread       = 0x001d9fa8
+ 0x9de7ea0c: istate->_bcp          = 0x00000000
+ 0x9de7ea10: istate->_locals       = 0x9de7ea5c
+ 0x9de7ea14: istate->_constants    = 0xb07f0530
+ 0x9de7ea18: istate->_method       = org.openni.NativeMethods.oniStreamReadFrame(JLorg/openni/OutArg;)I
+ 0x9de7ea1c: istate->_mdx          = 0xb0f41d78
+ 0x9de7ea20: istate->_stack        = 0xb0bd4228
+ 0x9de7ea24: istate->_msg          = 0x00000000
+ 0x9de7ea28: istate->_result       = 0x00000000
+ 0x9de7ea2c: (istate->_result)     = 0x00000000
+ 0x9de7ea30: (istate->_result)     = 0xb45c4140
+ 0x9de7ea34: istate->_prev_link    = 0x9de7e9f4
+ 0x9de7ea38: istate->_oop_temp     = 0xb07ef298
+ 0x9de7ea3c: istate->_stack_base   = 0x9de7ea08
+ 0x9de7ea40: istate->_stack_limit  = 0x9de7ea04
+ 0x9de7ea44: istate->_monitor_base = 0x9de7ea08
+ 0x9de7ea48: istate->_self_link    = 0x9de7ea08
+ 0x9de7ea4c: frame_type            = INTERPRETER_FRAME
+ 0x9de7ea50: next_frame            = 0x9de7eaa8
+
+ 0x9de7ea54: local[2]              = 0xa2ae2000
+ 0x9de7ea58: local[1]              = 0x001d5d58
+ 0x9de7ea5c: local[0]              = 0x00000000
+ 0x9de7ea60: istate->_thread       = 0x001d9fa8
+ 0x9de7ea64: istate->_bcp          = 0xb0bd3fe5 (bci 13)
+ 0x9de7ea68: istate->_locals       = 0x9de7eab0
+ 0x9de7ea6c: istate->_constants    = 0xb0f41d78
+ 0x9de7ea70: istate->_method       = org.openni.VideoStream.readFrame()Lorg/openni/VideoFrameRef;
+ 0x9de7ea74: istate->_mdx          = 0x00000000
+ 0x9de7ea78: istate->_stack        = 0x9de7ea50
+ 0x9de7ea7c: istate->_msg          = 0x00000000
+ 0x9de7ea80: istate->_result       = 0xa2ad6cc0
+ 0x9de7ea84: (istate->_result)     = 0xb45c4174
+ 0x9de7ea88: (istate->_result)     = 0x9de7ea54
+ 0x9de7ea8c: istate->_prev_link    = 0x9de7ea44
+ 0x9de7ea90: istate->_oop_temp     = 0x00000000
+ 0x9de7ea94: istate->_stack_base   = 0x9de7ea60
+ 0x9de7ea98: istate->_stack_limit  = 0x9de7ea50
+ 0x9de7ea9c: istate->_monitor_base = 0x9de7ea60
+ 0x9de7eaa0: istate->_self_link    = 0x9de7ea60
+ 0x9de7eaa4: frame_type            = INTERPRETER_FRAME
+ 0x9de7eaa8: next_frame            = 0x9de7eb08
+
+ 0x9de7eaac: local[2]              = 0xa2ae2000
+ 0x9de7eab0: local[1]              = 0xa2a3e758
+ 0x9de7eab4: local[0]              = 0xa7317088
+ 0x9de7eab8: monitor[0]->_lock     = 0x00000001
+ 0x9de7eabc: monitor[0]->_obj      = 0xa7317088
+ 0x9de7eac0: istate->_thread       = 0x001d9fa8
+ 0x9de7eac4: istate->_bcp          = 0xb07e8968 (bci 24)
+ 0x9de7eac8: istate->_locals       = 0x9de7eb24
+ 0x9de7eacc: istate->_constants    = 0xb0bd2ab8
+ 0x9de7ead0: istate->_method       = org.openni.Samples.SimpleViewer.SimpleViewer.onFrameReady(Lorg/openni/VideoStream;)V
+ 0x9de7ead4: istate->_mdx          = 0x00000000
+ 0x9de7ead8: istate->_stack        = 0x9de7eaac
+ 0x9de7eadc: istate->_msg          = 0x00000000
+ 0x9de7eae0: istate->_result       = 0x00000000
+ 0x9de7eae4: (istate->_result)     = 0xb45c4140
+ 0x9de7eae8: (istate->_result)     = 0xb0bd4228
+ 0x9de7eaec: istate->_prev_link    = 0x00000000
+ 0x9de7eaf0: istate->_oop_temp     = 0x00000000
+ 0x9de7eaf4: istate->_stack_base   = 0x9de7eab8
+ 0x9de7eaf8: istate->_stack_limit  = 0x9de7eaa0
+ 0x9de7eafc: istate->_monitor_base = 0x9de7eac0
+ 0x9de7eb00: istate->_self_link    = 0x9de7eac0
+ 0x9de7eb04: frame_type            = INTERPRETER_FRAME
+ 0x9de7eb08: next_frame            = 0x9de7eb70
+
+ 0x9de7eb0c: local[6]              = 0x00000000
+ 0x9de7eb10: local[5]              = 0x00000000
+ 0x9de7eb14: local[4]              = 0x00000000
+ 0x9de7eb18: local[3]              = 0x00000000
+ 0x9de7eb1c: local[2]              = 0x00000000
+ 0x9de7eb20: local[1]              = 0xa2a3e758
+ 0x9de7eb24: local[0]              = 0xa7317088
+ 0x9de7eb28: istate->_thread       = 0x001d9fa8
+ 0x9de7eb2c: istate->_bcp          = 0xb0bd4cd7 (bci 63)
+ 0x9de7eb30: istate->_locals       = 0x9de7eb84
+ 0x9de7eb34: istate->_constants    = 0xb0f41d78
+ 0x9de7eb38: istate->_method       = org.openni.VideoStream.onFrameReady(J)V
+ 0x9de7eb3c: istate->_mdx          = 0x00000000
+ 0x9de7eb40: istate->_stack        = 0x9de7eb1c
+ 0x9de7eb44: istate->_msg          = 0x00000000
+ 0x9de7eb48: istate->_result       = 0x9de7eb0c
+ 0x9de7eb4c: (istate->_result)     = 0xb45c4144
+ 0x9de7eb50: (istate->_result)     = 0x00000002
+ 0x9de7eb54: istate->_prev_link    = 0x9de7eb70
+ 0x9de7eb58: istate->_oop_temp     = 0x00000000
+ 0x9de7eb5c: istate->_stack_base   = 0x9de7eb28
+ 0x9de7eb60: istate->_stack_limit  = 0x9de7eb14
+ 0x9de7eb64: istate->_monitor_base = 0x9de7eb28
+ 0x9de7eb68: istate->_self_link    = 0x9de7eb28
+ 0x9de7eb6c: frame_type            = INTERPRETER_FRAME
+ 0x9de7eb70: next_frame            = 0x9de7eb90
+
+ 0x9de7eb74: local[4]              = 0xa2a3e758
+ 0x9de7eb78: local[3]              = 0xa2ad6cc0
+ 0x9de7eb7c: local[2]              = 0xa2ae0220
+ 0x9de7eb80: local[1]              = 0x001d5d58
+ 0x9de7eb84: local[0]              = 0x00000000
+ 0x9de7eb88: call_wrapper          = 0x9de7ebf0
+ 0x9de7eb8c: frame_type            = ENTRY_FRAME
+ 0x9de7eb90: next_frame            = 0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x001d9fa8 JavaThread "Thread-3" [_thread_in_native, id=26223, stack(0x9d681000,0x9de80000)]
+  0x001ef2c0 JavaThread "TimerQueue" daemon [_thread_blocked, id=26221, stack(0x9eb09000,0x9ec89000)]
+  0x9e80bd00 JavaThread "AWT-EventQueue-2" [_thread_blocked, id=26218, stack(0x9e680000,0x9e800000)]
+  0x9e80ba60 JavaThread "AWT-Shutdown" [_thread_blocked, id=26217, stack(0x9e989000,0x9eb09000)]
+  0x00192918 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=26210, stack(0x9ec89000,0x9ee09000)]
+  0x00144860 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=26209, stack(0x9eedf000,0x9f05f000)]
+  0x00093a90 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=26203, stack(0xa1e88000,0xa2008000)]
+  0x000901e0 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=26202, stack(0xa2008000,0xa2188000)]
+  0x0007ed18 JavaThread "Finalizer" daemon [_thread_blocked, id=26201, stack(0xa22ff000,0xa247f000)]
+  0x0007d938 JavaThread "Reference Handler" daemon [_thread_blocked, id=26200, stack(0xa247f000,0xa25ff000)]
+  0x00028500 JavaThread "main" [_thread_blocked, id=26198, stack(0xb6674000,0xb67f3000)]
+
+Other Threads:
+  0x0007a9b0 VMThread [stack: 0xa2600000,0xa267f000] [id=26199]
+  0x00095780 WatcherThread [stack: 0xa1e09000,0xa1e88000] [id=26204]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 2304K, used 1687K [0xa2940000, 0xa2ba0000, 0xa7280000)
+  eden space 2176K,  77% used [0xa2940000, 0xa2ae5d68, 0xa2b60000)
+  from space 128K,   0% used [0xa2b60000, 0xa2b60000, 0xa2b80000)
+  to   space 128K,   0% used [0xa2b80000, 0xa2b80000, 0xa2ba0000)
+ tenured generation   total 4736K, used 665K [0xa7280000, 0xa7720000, 0xb0540000)
+   the space 4736K,  14% used [0xa7280000, 0xa73264e0, 0xa7326600, 0xa7720000)
+ compacting perm gen  total 10496K, used 10448K [0xb0540000, 0xb0f80000, 0xb4540000)
+   the space 10496K,  99% used [0xb0540000, 0xb0f74088, 0xb0f74200, 0xb0f80000)
+No shared spaces configured.
+
+Code Cache  [0xb45c4000, 0xb45ec000, 0xb65c4000)
+ total_blobs=198 nmethods=0 adapters=184 free_code_cache=33475200 largest_free_block=0
+
+Dynamic libraries:
+00008000-00012000 r-xp 00000000 b3:02 259459     /usr/lib/jvm/java-6-openjdk-armhf/jre/bin/java
+00019000-0001a000 rw-p 00009000 b3:02 259459     /usr/lib/jvm/java-6-openjdk-armhf/jre/bin/java
+00023000-002d8000 rw-p 00000000 00:00 0          [heap]
+9cd00000-9cd71000 rw-p 00000000 00:00 0 
+9cd71000-9ce00000 ---p 00000000 00:00 0 
+9ce80000-9ce81000 ---p 00000000 00:00 0 
+9ce81000-9d680000 rw-p 00000000 00:00 0          [stack:26224]
+9d680000-9d684000 ---p 00000000 00:00 0 
+9d684000-9de80000 rw-p 00000000 00:00 0          [stack:26223]
+9de80000-9de81000 ---p 00000000 00:00 0 
+9de81000-9e680000 rw-p 00000000 00:00 0 
+9e680000-9e683000 ---p 00000000 00:00 0 
+9e683000-9e800000 rw-p 00000000 00:00 0          [stack:26218]
+9e800000-9e8f7000 rw-p 00000000 00:00 0 
+9e8f7000-9e900000 ---p 00000000 00:00 0 
+9e989000-9e98c000 ---p 00000000 00:00 0 
+9e98c000-9eb09000 rw-p 00000000 00:00 0          [stack:26217]
+9eb09000-9eb0c000 ---p 00000000 00:00 0 
+9eb0c000-9ec89000 rw-p 00000000 00:00 0          [stack:26221]
+9ec89000-9ec8c000 ---p 00000000 00:00 0 
+9ec8c000-9ee09000 rw-p 00000000 00:00 0          [stack:26210]
+9ee09000-9ee10000 r--s 00000000 b3:02 31398      /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d8.cache-3
+9ee10000-9ee18000 r--s 00000000 b3:02 3012       /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d8.cache-3
+9ee18000-9ee28000 r--s 00000000 b3:02 31396      /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d8.cache-3
+9ee36000-9ee48000 r-xp 00000000 b3:02 259448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnet.so
+9ee48000-9ee50000 ---p 00012000 b3:02 259448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnet.so
+9ee50000-9ee51000 rw-p 00012000 b3:02 259448     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnet.so
+9ee51000-9ee58000 r--s 00000000 b3:02 31398      /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le32d8.cache-3
+9ee58000-9ee5d000 r--s 00000000 b3:02 3023       /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le32d8.cache-3
+9ee5d000-9ee6d000 r--s 00000000 b3:02 31396      /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le32d8.cache-3
+9ee6d000-9ee81000 r--s 00000000 b3:02 284265     /home/pi/.fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d8.cache-3
+9ee83000-9ee88000 r--s 00000000 b3:02 3023       /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le32d8.cache-3
+9ee88000-9ee9c000 r--s 00000000 b3:02 284265     /home/pi/.fontconfig/e13b20fdb08344e0e664864cc2ede53d-le32d8.cache-3
+9eea9000-9eead000 r-xp 00000000 b3:02 25705      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+9eead000-9eeb4000 ---p 00004000 b3:02 25705      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+9eeb4000-9eeb5000 r--p 00003000 b3:02 25705      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+9eeb5000-9eeb6000 rw-p 00004000 b3:02 25705      /usr/lib/arm-linux-gnueabihf/libXfixes.so.3.1.0
+9eeb6000-9eebe000 r-xp 00000000 b3:02 25916      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+9eebe000-9eec5000 ---p 00008000 b3:02 25916      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+9eec5000-9eec6000 rw-p 00007000 b3:02 25916      /usr/lib/arm-linux-gnueabihf/libXcursor.so.1.0.2
+9eec6000-9eecc000 r-xp 00000000 b3:02 259429     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnio.so
+9eecc000-9eed3000 ---p 00006000 b3:02 259429     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnio.so
+9eed3000-9eed4000 rw-p 00005000 b3:02 259429     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libnio.so
+9eed4000-9eed9000 r--s 00000000 b3:02 2947       /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le32d8.cache-3
+9eed9000-9eedf000 r--s 00000000 b3:02 25999      /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le32d8.cache-3
+9eedf000-9eee2000 ---p 00000000 00:00 0 
+9eee2000-9f05f000 rw-p 00000000 00:00 0          [stack:26209]
+9f05f000-9f0d5000 r-xp 00000000 b3:02 24482      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.1
+9f0d5000-9f0dd000 ---p 00076000 b3:02 24482      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.1
+9f0dd000-9f0e0000 r--p 00076000 b3:02 24482      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.1
+9f0e0000-9f0e1000 rw-p 00079000 b3:02 24482      /usr/lib/arm-linux-gnueabihf/libfreetype.so.6.8.1
+9f0e1000-9f11c000 r-xp 00000000 b3:02 259439     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+9f11c000-9f123000 ---p 0003b000 b3:02 259439     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+9f123000-9f125000 rw-p 0003a000 b3:02 259439     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libfontmanager.so
+9f125000-9f129000 r-xp 00000000 b3:02 15912      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+9f129000-9f130000 ---p 00004000 b3:02 15912      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+9f130000-9f131000 rw-p 00003000 b3:02 15912      /usr/lib/arm-linux-gnueabihf/libXdmcp.so.6.0.0
+9f131000-9f133000 r-xp 00000000 b3:02 15906      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+9f133000-9f13a000 ---p 00002000 b3:02 15906      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+9f13a000-9f13b000 rw-p 00001000 b3:02 15906      /usr/lib/arm-linux-gnueabihf/libXau.so.6.0.0
+9f13b000-9f151000 r-xp 00000000 b3:02 15920      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+9f151000-9f158000 ---p 00016000 b3:02 15920      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+9f158000-9f159000 r--p 00015000 b3:02 15920      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+9f159000-9f15a000 rw-p 00016000 b3:02 15920      /usr/lib/arm-linux-gnueabihf/libxcb.so.1.1.0
+9f15a000-9f166000 r-xp 00000000 b3:02 7054       /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+9f166000-9f16d000 ---p 0000c000 b3:02 7054       /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+9f16d000-9f16e000 rw-p 0000b000 b3:02 7054       /usr/lib/arm-linux-gnueabihf/libXi.so.6.1.0
+9f16e000-9f172000 r-xp 00000000 b3:02 11725      /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+9f172000-9f179000 ---p 00004000 b3:02 11725      /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+9f179000-9f17a000 rw-p 00003000 b3:02 11725      /usr/lib/arm-linux-gnueabihf/libXtst.so.6.1.0
+9f17a000-9f182000 r-xp 00000000 b3:02 25367      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+9f182000-9f189000 ---p 00008000 b3:02 25367      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+9f189000-9f18a000 rw-p 00007000 b3:02 25367      /usr/lib/arm-linux-gnueabihf/libXrender.so.1.3.0
+9f18a000-9f293000 r-xp 00000000 b3:02 15948      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+9f293000-9f29a000 ---p 00109000 b3:02 15948      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+9f29a000-9f29e000 rw-p 00108000 b3:02 15948      /usr/lib/arm-linux-gnueabihf/libX11.so.6.3.0
+9f29e000-9f2ab000 r-xp 00000000 b3:02 15962      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+9f2ab000-9f2b3000 ---p 0000d000 b3:02 15962      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+9f2b3000-9f2b4000 rw-p 0000d000 b3:02 15962      /usr/lib/arm-linux-gnueabihf/libXext.so.6.4.0
+9f2b5000-9f2bd000 r--s 00000000 b3:02 3012       /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le32d8.cache-3
+9f2bd000-9f2c2000 r--s 00000000 b3:02 2947       /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le32d8.cache-3
+9f2c2000-9f302000 r-xp 00000000 b3:02 274898     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/xawt/libmawt.so
+9f302000-9f304000 rw-p 00040000 b3:02 274898     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/xawt/libmawt.so
+9f304000-9f305000 rw-p 00000000 00:00 0 
+9f305000-9f38e000 r-xp 00000000 b3:02 259421     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+9f38e000-9f396000 ---p 00089000 b3:02 259421     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+9f396000-9f39d000 rw-p 00089000 b3:02 259421     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libawt.so
+9f39d000-9fbc3000 rw-p 00000000 00:00 0 
+9fbc3000-9fbc4000 ---p 00000000 00:00 0 
+9fbc4000-a03c3000 rw-p 00000000 00:00 0          [stack:26208]
+a03c3000-a03c4000 ---p 00000000 00:00 0 
+a03c4000-a0bc3000 rw-p 00000000 00:00 0          [stack:26207]
+a0bc3000-a0bc4000 ---p 00000000 00:00 0 
+a0bc4000-a13c3000 rw-p 00000000 00:00 0          [stack:26206]
+a13c3000-a140d000 r-xp 00000000 b3:02 400823     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPSLink.so
+a140d000-a1414000 ---p 0004a000 b3:02 400823     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPSLink.so
+a1414000-a1417000 rw-p 00049000 b3:02 400823     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPSLink.so
+a1417000-a1418000 rw-p 00000000 00:00 0 
+a1418000-a1419000 ---p 00000000 00:00 0 
+a1419000-a1c18000 rw-p 00000000 00:00 0          [stack:26205]
+a1c18000-a1c24000 r-xp 00000000 b3:02 4388       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+a1c24000-a1c2b000 ---p 0000c000 b3:02 4388       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+a1c2b000-a1c2c000 r--p 0000b000 b3:02 4388       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+a1c2c000-a1c2d000 rw-p 0000c000 b3:02 4388       /lib/arm-linux-gnueabihf/libudev.so.0.13.0
+a1c2d000-a1c39000 r-xp 00000000 b3:02 24309      /lib/arm-linux-gnueabihf/libusb-1.0.so.0.1.0
+a1c39000-a1c40000 ---p 0000c000 b3:02 24309      /lib/arm-linux-gnueabihf/libusb-1.0.so.0.1.0
+a1c40000-a1c41000 r--p 0000b000 b3:02 24309      /lib/arm-linux-gnueabihf/libusb-1.0.so.0.1.0
+a1c41000-a1c42000 rw-p 0000c000 b3:02 24309      /lib/arm-linux-gnueabihf/libusb-1.0.so.0.1.0
+a1c42000-a1c43000 r--s 00000000 b3:02 3082       /var/cache/fontconfig/617957603a337376ca8784972c6029f5-le32d8.cache-3
+a1c43000-a1c49000 r--s 00000000 b3:02 25999      /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le32d8.cache-3
+a1c49000-a1c50000 r--s 000fc000 b3:02 258891     /usr/lib/jvm/java-6-openjdk-common/jre/lib/resources.jar
+a1c50000-a1cdc000 r-xp 00000000 b3:02 400825     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPS1080.so
+a1cdc000-a1ce3000 ---p 0008c000 b3:02 400825     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPS1080.so
+a1ce3000-a1ce7000 rw-p 0008b000 b3:02 400825     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libPS1080.so
+a1ce7000-a1d08000 rw-p 00000000 00:00 0 
+a1d08000-a1d47000 r-xp 00000000 b3:02 400824     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libOniFile.so
+a1d47000-a1d4f000 ---p 0003f000 b3:02 400824     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libOniFile.so
+a1d4f000-a1d51000 rw-p 0003f000 b3:02 400824     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/OpenNI2/Drivers/libOniFile.so
+a1d51000-a1d71000 rw-p 00000000 00:00 0 
+a1d71000-a1d78000 r--s 00000000 b3:02 3996       /usr/lib/arm-linux-gnueabihf/gconv/gconv-modules.cache
+a1d78000-a1dc2000 r-xp 00000000 b3:02 400828     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.so
+a1dc2000-a1dca000 ---p 0004a000 b3:02 400828     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.so
+a1dca000-a1dcb000 rw-p 0004a000 b3:02 400828     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.so
+a1dcb000-a1dec000 rw-p 00000000 00:00 0 
+a1dec000-a1df2000 r-xp 00000000 b3:02 400836     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.jni.so
+a1df2000-a1df9000 ---p 00006000 b3:02 400836     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.jni.so
+a1df9000-a1dfa000 rw-p 00005000 b3:02 400836     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/libOpenNI2.jni.so
+a1dfa000-a1dfc000 r--s 00004000 b3:02 400827     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/org.openni.jar
+a1dfc000-a1dff000 r--s 0007f000 b3:02 258873     /usr/lib/jvm/java-6-openjdk-common/jre/lib/jsse.jar
+a1dff000-a1e01000 r--s 00001000 b3:02 400833     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/org.openni.Samples.SimpleViewer.jar
+a1e01000-a1e04000 r--s 00078000 b3:02 258903     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/localedata.jar
+a1e04000-a1e08000 r--s 00030000 b3:02 258905     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/sunjce_provider.jar
+a1e08000-a1e09000 ---p 00000000 00:00 0 
+a1e09000-a1e88000 rw-p 00000000 00:00 0          [stack:26204]
+a1e88000-a1e8b000 ---p 00000000 00:00 0 
+a1e8b000-a2008000 rw-p 00000000 00:00 0          [stack:26203]
+a2008000-a200b000 ---p 00000000 00:00 0 
+a200b000-a2188000 rw-p 00000000 00:00 0          [stack:26202]
+a2188000-a22ff000 r--p 00000000 b3:02 16057      /usr/lib/locale/locale-archive
+a22ff000-a2302000 ---p 00000000 00:00 0 
+a2302000-a247f000 rw-p 00000000 00:00 0          [stack:26201]
+a247f000-a2482000 ---p 00000000 00:00 0 
+a2482000-a25ff000 rw-p 00000000 00:00 0          [stack:26200]
+a25ff000-a2600000 ---p 00000000 00:00 0 
+a2600000-a26b2000 rw-p 00000000 00:00 0          [stack:26199]
+a26b2000-a2846000 r--s 03807000 b3:02 259409     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/rt.jar
+a2846000-a284c000 rw-p 00000000 00:00 0 
+a284c000-a2867000 rw-p 00000000 00:00 0 
+a2867000-a286a000 rw-p 00000000 00:00 0 
+a286a000-a28b1000 rw-p 00000000 00:00 0 
+a28b1000-a28b3000 rw-p 00000000 00:00 0 
+a28b3000-a28d5000 rw-p 00000000 00:00 0 
+a28d5000-a28d8000 rw-p 00000000 00:00 0 
+a28d8000-a291f000 rw-p 00000000 00:00 0 
+a291f000-a2925000 rw-p 00000000 00:00 0 
+a2925000-a293f000 rw-p 00000000 00:00 0 
+a293f000-a2ba0000 rw-p 00000000 00:00 0 
+a2ba0000-a7280000 rw-p 00000000 00:00 0 
+a7280000-a7720000 rw-p 00000000 00:00 0 
+a7720000-b0540000 rw-p 00000000 00:00 0 
+b0540000-b0f80000 rw-p 00000000 00:00 0 
+b0f80000-b4540000 rw-p 00000000 00:00 0 
+b4540000-b4541000 r--s 00000000 b3:02 3082       /var/cache/fontconfig/617957603a337376ca8784972c6029f5-le32d8.cache-3
+b4541000-b4544000 r--s 00039000 b3:02 258901     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/sunpkcs11.jar
+b4544000-b4545000 rw-p 00000000 00:00 0 
+b4545000-b45c4000 rw-p 00000000 00:00 0 
+b45c4000-b45ec000 rwxp 00000000 00:00 0 
+b45ec000-b65c4000 rw-p 00000000 00:00 0 
+b65c4000-b65ca000 r-xp 00000000 b3:02 259417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+b65ca000-b65d1000 ---p 00006000 b3:02 259417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+b65d1000-b65d2000 rw-p 00005000 b3:02 259417     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libzip.so
+b65d2000-b65dc000 r-xp 00000000 b3:02 4243       /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+b65dc000-b65e3000 ---p 0000a000 b3:02 4243       /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+b65e3000-b65e4000 r--p 00009000 b3:02 4243       /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+b65e4000-b65e5000 rw-p 0000a000 b3:02 4243       /lib/arm-linux-gnueabihf/libnss_files-2.13.so
+b65e5000-b65ee000 r-xp 00000000 b3:02 4261       /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+b65ee000-b65f5000 ---p 00009000 b3:02 4261       /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+b65f5000-b65f6000 r--p 00008000 b3:02 4261       /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+b65f6000-b65f7000 rw-p 00009000 b3:02 4261       /lib/arm-linux-gnueabihf/libnss_nis-2.13.so
+b65f7000-b65fd000 r-xp 00000000 b3:02 4257       /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+b65fd000-b6604000 ---p 00006000 b3:02 4257       /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+b6604000-b6605000 r--p 00005000 b3:02 4257       /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+b6605000-b6606000 rw-p 00006000 b3:02 4257       /lib/arm-linux-gnueabihf/libnss_compat-2.13.so
+b6606000-b6617000 r-xp 00000000 b3:02 4255       /lib/arm-linux-gnueabihf/libnsl-2.13.so
+b6617000-b661e000 ---p 00011000 b3:02 4255       /lib/arm-linux-gnueabihf/libnsl-2.13.so
+b661e000-b661f000 r--p 00010000 b3:02 4255       /lib/arm-linux-gnueabihf/libnsl-2.13.so
+b661f000-b6620000 rw-p 00011000 b3:02 4255       /lib/arm-linux-gnueabihf/libnsl-2.13.so
+b6620000-b6622000 rw-p 00000000 00:00 0 
+b6622000-b6646000 r-xp 00000000 b3:02 259422     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+b6646000-b664e000 ---p 00024000 b3:02 259422     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+b664e000-b6650000 rw-p 00024000 b3:02 259422     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libjava.so
+b6650000-b665b000 r-xp 00000000 b3:02 259434     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+b665b000-b6663000 ---p 0000b000 b3:02 259434     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+b6663000-b6664000 rw-p 0000b000 b3:02 259434     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/libverify.so
+b6664000-b666a000 r-xp 00000000 b3:02 4239       /lib/arm-linux-gnueabihf/librt-2.13.so
+b666a000-b6671000 ---p 00006000 b3:02 4239       /lib/arm-linux-gnueabihf/librt-2.13.so
+b6671000-b6672000 r--p 00005000 b3:02 4239       /lib/arm-linux-gnueabihf/librt-2.13.so
+b6672000-b6673000 rw-p 00006000 b3:02 4239       /lib/arm-linux-gnueabihf/librt-2.13.so
+b6673000-b6677000 ---p 00000000 00:00 0 
+b6677000-b67f3000 rw-p 00000000 00:00 0          [stack:26198]
+b67f3000-b685b000 r-xp 00000000 b3:02 4260       /lib/arm-linux-gnueabihf/libm-2.13.so
+b685b000-b6862000 ---p 00068000 b3:02 4260       /lib/arm-linux-gnueabihf/libm-2.13.so
+b6862000-b6863000 r--p 00067000 b3:02 4260       /lib/arm-linux-gnueabihf/libm-2.13.so
+b6863000-b6864000 rw-p 00068000 b3:02 4260       /lib/arm-linux-gnueabihf/libm-2.13.so
+b6864000-b691e000 r-xp 00000000 b3:02 10861      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.17
+b691e000-b6925000 ---p 000ba000 b3:02 10861      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.17
+b6925000-b6929000 r--p 000b9000 b3:02 10861      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.17
+b6929000-b692b000 rw-p 000bd000 b3:02 10861      /usr/lib/arm-linux-gnueabihf/libstdc++.so.6.0.17
+b692b000-b6931000 rw-p 00000000 00:00 0 
+b6931000-b6cb9000 r-xp 00000000 b3:02 259436     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server/libjvm.so
+b6cb9000-b6cd6000 rw-p 00388000 b3:02 259436     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server/libjvm.so
+b6cd6000-b6d30000 rw-p 00000000 00:00 0 
+b6d30000-b6d50000 r-xp 00000000 b3:02 1253       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+b6d50000-b6d57000 ---p 00020000 b3:02 1253       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+b6d57000-b6d58000 rw-p 0001f000 b3:02 1253       /lib/arm-linux-gnueabihf/libgcc_s.so.1
+b6d58000-b6e7a000 r-xp 00000000 b3:02 4252       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6e7a000-b6e81000 ---p 00122000 b3:02 4252       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6e81000-b6e83000 r--p 00121000 b3:02 4252       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6e83000-b6e84000 rw-p 00123000 b3:02 4252       /lib/arm-linux-gnueabihf/libc-2.13.so
+b6e84000-b6e87000 rw-p 00000000 00:00 0 
+b6e87000-b6e89000 r-xp 00000000 b3:02 4258       /lib/arm-linux-gnueabihf/libdl-2.13.so
+b6e89000-b6e90000 ---p 00002000 b3:02 4258       /lib/arm-linux-gnueabihf/libdl-2.13.so
+b6e90000-b6e91000 r--p 00001000 b3:02 4258       /lib/arm-linux-gnueabihf/libdl-2.13.so
+b6e91000-b6e92000 rw-p 00002000 b3:02 4258       /lib/arm-linux-gnueabihf/libdl-2.13.so
+b6e92000-b6e95000 r-xp 00000000 b3:02 259443     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+b6e95000-b6e9c000 ---p 00003000 b3:02 259443     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+b6e9c000-b6e9d000 rw-p 00002000 b3:02 259443     /usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/jli/libjli.so
+b6e9d000-b6eb1000 r-xp 00000000 b3:02 4245       /lib/arm-linux-gnueabihf/libpthread-2.13.so
+b6eb1000-b6eb8000 ---p 00014000 b3:02 4245       /lib/arm-linux-gnueabihf/libpthread-2.13.so
+b6eb8000-b6eb9000 r--p 00013000 b3:02 4245       /lib/arm-linux-gnueabihf/libpthread-2.13.so
+b6eb9000-b6eba000 rw-p 00014000 b3:02 4245       /lib/arm-linux-gnueabihf/libpthread-2.13.so
+b6eba000-b6ebc000 rw-p 00000000 00:00 0 
+b6ebc000-b6ed0000 r-xp 00000000 b3:02 5181       /lib/arm-linux-gnueabihf/libz.so.1.2.7
+b6ed0000-b6ed8000 ---p 00014000 b3:02 5181       /lib/arm-linux-gnueabihf/libz.so.1.2.7
+b6ed8000-b6ed9000 r--p 00014000 b3:02 5181       /lib/arm-linux-gnueabihf/libz.so.1.2.7
+b6ed9000-b6eda000 rw-p 00015000 b3:02 5181       /lib/arm-linux-gnueabihf/libz.so.1.2.7
+b6eda000-b6edc000 r--s 0000f000 b3:02 258904     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/pulse-java.jar
+b6edc000-b6ede000 r--s 00001000 b3:02 258902     /usr/lib/jvm/java-6-openjdk-common/jre/lib/ext/dnsns.jar
+b6ede000-b6ee0000 r--s 00001000 b3:02 400833     /home/pi/OpenNI2/Packaging/Final/OpenNI-Linux-Arm-2.2/Samples/Bin/org.openni.Samples.SimpleViewer.jar
+b6ee0000-b6ee8000 rw-s 00000000 b3:02 285110     /tmp/hsperfdata_pi/26197
+b6ee8000-b6eea000 r-xp 00000000 b3:02 25003      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6eea000-b6ef1000 ---p 00002000 b3:02 25003      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6ef1000-b6ef2000 rw-p 00001000 b3:02 25003      /usr/lib/arm-linux-gnueabihf/libcofi_rpi.so
+b6ef2000-b6f0f000 r-xp 00000000 b3:02 4246       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6f0f000-b6f10000 r--s 00007000 b3:02 145220     /usr/share/java/java-atk-wrapper.jar
+b6f10000-b6f11000 rw-p 00000000 00:00 0 
+b6f11000-b6f12000 r--p 00000000 00:00 0 
+b6f12000-b6f16000 rw-p 00000000 00:00 0 
+b6f16000-b6f17000 r-xp 00000000 00:00 0          [sigpage]
+b6f17000-b6f18000 r--p 0001d000 b3:02 4246       /lib/arm-linux-gnueabihf/ld-2.13.so
+b6f18000-b6f19000 rw-p 0001e000 b3:02 4246       /lib/arm-linux-gnueabihf/ld-2.13.so
+bed4e000-bed81000 rw-p 00000000 00:00 0          [stack]
+ffff0000-ffff1000 r-xp 00000000 00:00 0          [vectors]
+
+VM Arguments:
+java_command: org.openni.Samples.SimpleViewer.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib/arm-linux-gnueabihf/libfm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+LD_LIBRARY_PATH=/usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm/server:/usr/lib/jvm/java-6-openjdk-armhf/jre/lib/arm:/usr/lib/jvm/java-6-openjdk-armhf/jre/../lib/arm:.
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x33ee9c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x33ee9c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x28dd0c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x28dd0c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x28dd0c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x28dd0c], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x28dedc], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x290228], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x290228], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x290228], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x290228], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:7.2
+
+uname:Linux 3.10.25+ #622 PREEMPT Fri Jan 3 18:41:00 GMT 2014 armv6l
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 3372, NOFILE 4096, AS infinity
+load average:0.45 0.48 0.54
+
+/proc/meminfo:
+MemTotal:         448180 kB
+MemFree:           28472 kB
+Buffers:           28444 kB
+Cached:           278424 kB
+SwapCached:            0 kB
+Active:           176532 kB
+Inactive:         199828 kB
+Active(anon):      29968 kB
+Inactive(anon):    41344 kB
+Active(file):     146564 kB
+Inactive(file):   158484 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:        102396 kB
+SwapFree:         102396 kB
+Dirty:                64 kB
+Writeback:             0 kB
+AnonPages:         69572 kB
+Mapped:            21392 kB
+Shmem:              1780 kB
+Slab:              33500 kB
+SReclaimable:      28668 kB
+SUnreclaim:         4832 kB
+KernelStack:        1392 kB
+PageTables:         1728 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      326484 kB
+Committed_AS:     307856 kB
+VmallocTotal:     565248 kB
+VmallocUsed:        3116 kB
+VmallocChunk:     345304 kB
+
+
+CPU:total 1 
+
+Memory: 4k page, physical 448180k(28472k free), swap 102396k(102396k free)
+
+vm_info: OpenJDK Zero VM (20.0-b12) for linux-arm JRE (1.6.0_27-b27), built on Oct 19 2013 12:04:32 by "root" with gcc 4.7.2
+
+time: Wed Mar  5 02:14:38 2014
+elapsed time: 32 seconds
+
